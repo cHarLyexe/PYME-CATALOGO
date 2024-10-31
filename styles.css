@@ -1,0 +1,293 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Encabezados */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+/* Secciones */
+.services,
+.gallery,
+.services-table,
+.cart,
+.contact {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Estilos para tarjetas de servicios */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-info {
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la galería de trabajos realizados */
+.gallery {
+    text-align: center;
+}
+
+.slider {
+    margin-top: 20px;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la tabla de servicios */
+.services-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.services-table th,
+.services-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.services-table th {
+    background-color: #25d366;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.services-table button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services-table button:hover {
+    background-color: #1ebea5;
+}
+
+/* Estilos para el carrito de compras */
+.cart {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart #cartItems {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cart p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.cart button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart button:hover {
+    background-color: #1ebea5;
+}
+
+.cart button.delete {
+    background-color: #dc3545;
+}
+
+.cart button.delete:hover {
+    background-color: #c82333;
+}
+
+.cart button.reset {
+    background-color: #6c757d;
+}
+
+.cart button.reset:hover {
+    background-color: #5a6268;
+}
+
+/* Cuadro de advertencia */
+.warning-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+.warning-box li {
+    margin-bottom: 5px;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .main-image {
+        height: auto;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnails img {
+        width: 75px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .services-table th,
+    .services-table td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .services-table button {
+        font-size: 0.9rem;
+    }
+
+    .cart p {
+        font-size: 1.2rem;
+    }
+
+    .cart button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .card {
+        width: 350px;
+    }
+
+    .main-image {
+        height: 500px;
+    }
+
+    .main-image img {
+        width: 450px;
+        height: 450px;
+    }
+
+    .thumbnails img {
+        width: 120px;
+        height: 90px;
+    }
+}
